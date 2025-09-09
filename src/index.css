@@ -23,11 +23,15 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 220 9% 5%;
 
-    /* Brand Colors - Cyan/Blue Theme */
-    --primary: 191 91% 36%;
+    /* Brand Colors - Purple/Orange Theme inspired by reference */
+    --primary: 250 84% 54%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 191 91% 55%;
-    --primary-light: 191 85% 94%;
+    --primary-glow: 250 84% 70%;
+    --primary-light: 250 100% 97%;
+    
+    /* Orange Accent */
+    --accent-orange: 35 91% 62%;
+    --accent-orange-light: 35 91% 85%;
 
     /* Secondary Colors */
     --secondary: 220 14% 96%;
@@ -60,9 +64,10 @@ All colors MUST be HSL.
     --text-muted: 220 9% 64%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(191 91% 36%), hsl(191 91% 55%));
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 14% 99%));
-    --gradient-hero: linear-gradient(135deg, hsl(191 91% 36%) 0%, hsl(210 100% 50%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(250 84% 54%), hsl(250 84% 70%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(250 100% 99%));
+    --gradient-hero: linear-gradient(135deg, hsl(250 84% 54%) 0%, hsl(35 91% 62%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(35 91% 62%), hsl(35 91% 75%));
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(220 9% 5% / 0.05);
@@ -105,11 +110,15 @@ All colors MUST be HSL.
     --popover: 220 13% 9%;
     --popover-foreground: 0 0% 98%;
 
-    /* Brand Colors - Maintain cyan theme in dark mode */
-    --primary: 191 91% 55%;
+    /* Brand Colors - Purple theme in dark mode */
+    --primary: 250 84% 65%;
     --primary-foreground: 220 15% 6%;
-    --primary-glow: 191 91% 65%;
-    --primary-light: 191 91% 15%;
+    --primary-glow: 250 84% 75%;
+    --primary-light: 250 84% 15%;
+    
+    /* Orange Accent */
+    --accent-orange: 35 91% 70%;
+    --accent-orange-light: 35 91% 25%;
 
     /* Secondary Colors */
     --secondary: 220 13% 15%;
@@ -142,9 +151,10 @@ All colors MUST be HSL.
     --text-muted: 220 9% 64%;
 
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(191 91% 55%), hsl(191 91% 65%));
-    --gradient-subtle: linear-gradient(180deg, hsl(220 15% 6%), hsl(220 13% 8%));
-    --gradient-hero: linear-gradient(135deg, hsl(191 91% 55%) 0%, hsl(210 100% 60%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(250 84% 65%), hsl(250 84% 75%));
+    --gradient-subtle: linear-gradient(180deg, hsl(220 15% 6%), hsl(250 15% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(250 84% 65%) 0%, hsl(35 91% 70%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(35 91% 70%), hsl(35 91% 80%));
 
     /* Shadows */
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);

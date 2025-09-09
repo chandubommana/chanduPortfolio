@@ -205,7 +205,7 @@ export function ContactSection() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full hero-gradient text-primary-foreground hover:shadow-glow transition-smooth disabled:opacity-50"
+                    className="w-full bg-orange hover:bg-orange/90 text-white hover:shadow-glow transition-smooth disabled:opacity-50"
                   >
                     {isSubmitting ? (
                       <div className="flex items-center gap-2">

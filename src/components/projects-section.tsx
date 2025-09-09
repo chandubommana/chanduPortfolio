@@ -112,40 +112,40 @@ export function ProjectsSection() {
                       </div>
                     </div>
 
-                    <div className="flex gap-3 pt-4 border-t border-border">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="flex items-center gap-2 hover:bg-primary/10 hover:border-primary transition-smooth"
-                        asChild
-                      >
-                        <a
-                          href={project.githubUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Github className="h-4 w-4" />
-                          Code
-                        </a>
-                      </Button>
-                      
-                      {project.liveUrl && (
-                        <Button
-                          size="sm"
-                          className="flex items-center gap-2 hero-gradient text-primary-foreground hover:shadow-glow transition-smooth"
-                          asChild
-                        >
-                          <a
-                            href={project.liveUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <ExternalLink className="h-4 w-4" />
-                            Live Demo
-                          </a>
-                        </Button>
-                      )}
-                    </div>
+            <div className="flex gap-3 pt-4 border-t border-border">
+              <Button
+                variant="outline"
+                size="sm"
+                className="flex items-center gap-2 hover:bg-primary/10 hover:border-primary transition-smooth"
+                asChild
+              >
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="h-4 w-4" />
+                  Code
+                </a>
+              </Button>
+              
+              {project.liveUrl && (
+                <Button
+                  size="sm"
+                  className="flex items-center gap-2 bg-orange hover:bg-orange/90 text-white hover:shadow-glow transition-smooth"
+                  asChild
+                >
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </a>
+                </Button>
+              )}
+            </div>
                   </CardContent>
                 </Card>
               );
@@ -168,34 +168,39 @@ export function ProjectsSection() {
                 {
                   title: "Full-Stack Development",
                   description: "Complete MERN & MEAN stack solutions",
-                  icon: "🚀"
+                  icon: "🚀",
+                  color: "bg-gradient-primary"
                 },
                 {
                   title: "Frontend Development", 
                   description: "Modern React & Angular applications",
-                  icon: "💻"
+                  icon: "💻",
+                  color: "bg-gradient-accent"
                 },
                 {
                   title: "API Integration",
                   description: "RESTful API development and integration",
-                  icon: "🔗"
+                  icon: "🔗",
+                  color: "bg-primary/20"
                 },
                 {
                   title: "Performance Optimization",
                   description: "Application debugging and optimization",
-                  icon: "⚡"
+                  icon: "⚡",
+                  color: "bg-orange/20"
                 }
               ].map((service, index) => (
                 <Card 
                   key={index} 
-                  className="surface-elevated animate-fade-in hover:shadow-glow transition-smooth text-center group"
+                  className="surface-elevated animate-fade-in hover:shadow-glow transition-smooth text-center group relative overflow-hidden"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <CardContent className="pt-6">
+                  <CardContent className="pt-6 relative">
+                    <div className={`absolute top-0 left-0 w-full h-1 ${service.color}`} />
                     <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">
                       {service.icon}
                     </div>
-                    <h4 className="font-semibold text-lg mb-2">{service.title}</h4>
+                    <h4 className="font-semibold text-lg mb-2 group-hover:text-primary transition-smooth">{service.title}</h4>
                     <p className="text-sm text-text-secondary">{service.description}</p>
                   </CardContent>
                 </Card>

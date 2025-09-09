@@ -33,6 +33,10 @@ export default {
           glow: "hsl(var(--primary-glow))",
           light: "hsl(var(--primary-light))",
         },
+        orange: {
+          DEFAULT: "hsl(var(--accent-orange))",
+          light: "hsl(var(--accent-orange-light))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -82,6 +86,7 @@ export default {
         'gradient-primary': 'var(--gradient-primary)',
         'gradient-subtle': 'var(--gradient-subtle)',
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-accent': 'var(--gradient-accent)',
       },
       boxShadow: {
         'glow': 'var(--shadow-glow)',
