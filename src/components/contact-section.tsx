@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -28,9 +29,20 @@ export function ContactSection() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     try {
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Replace these with your actual EmailJS credentials
+      const serviceId = 'YOUR_SERVICE_ID';
+      const templateId = 'YOUR_TEMPLATE_ID';
+      const publicKey = 'YOUR_PUBLIC_KEY';
+
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'chandubommana27@gmail.com',
+      };
+
+      await emailjs.send(serviceId, templateId, templateParams, publicKey);
       
       toast({
         title: "Message sent successfully!",
@@ -39,6 +51,7 @@ export function ContactSection() {
       
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
+      console.error('EmailJS error:', error);
       toast({
         title: "Error sending message",
         description: "Please try again or contact me directly via email.",
@@ -84,10 +97,10 @@ export function ContactSection() {
                       <div>
                         <p className="font-medium">Email</p>
                         <a 
-                          href="mailto:chandu.bommana@example.com"
+                          href="mailto:chandubommana27@gmail.com"
                           className="text-primary hover:text-primary-glow transition-colors"
                         >
-                          chandu.bommana@example.com
+                          chandubommana27@gmail.com
                         </a>
                       </div>
                     </div>
