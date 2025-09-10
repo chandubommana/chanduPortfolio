@@ -1,4 +1,4 @@
-import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Mail, Sparkles, Code2, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import profileImage from "@/assets/profile-image.jpg";
 export function HeroSection() {
@@ -11,89 +11,123 @@ export function HeroSection() {
     }
   };
   return <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Modern Background with Shapes */}
-      <div className="absolute inset-0 bg-gradient-hero opacity-90" />
+      {/* Modern Background with Enhanced Gradient */}
+      <div className="absolute inset-0 bg-gradient-hero opacity-95" />
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-orange/10" />
       
-      {/* Decorative Elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-orange/20 rounded-full blur-xl animate-pulse" />
-      <div className="absolute bottom-32 right-16 w-24 h-24 bg-primary-glow/30 rounded-full blur-lg animate-bounce" />
-      <div className="absolute top-1/3 right-10 w-16 h-16 bg-orange/40 rotate-45 blur-md animate-spin" style={{
+      {/* Enhanced Decorative Elements */}
+      <div className="absolute top-20 left-10 w-40 h-40 bg-orange/20 rounded-full blur-2xl animate-pulse" />
+      <div className="absolute bottom-32 right-16 w-32 h-32 bg-primary-glow/30 rounded-full blur-xl animate-bounce" />
+      <div className="absolute top-1/3 right-10 w-20 h-20 bg-orange/40 rotate-45 blur-lg animate-spin" style={{
       animationDuration: '20s'
     }} />
+      
+      {/* Floating Icons */}
+      <div className="absolute top-1/4 left-1/4 opacity-20 animate-float">
+        <Code2 className="w-8 h-8 text-primary" />
+      </div>
+      <div className="absolute bottom-1/4 right-1/4 opacity-20 animate-float" style={{ animationDelay: '1s' }}>
+        <Sparkles className="w-6 h-6 text-orange" />
+      </div>
+      <div className="absolute top-3/4 left-1/3 opacity-20 animate-float" style={{ animationDelay: '2s' }}>
+        <Zap className="w-7 h-7 text-primary-glow" />
+      </div>
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content Side */}
           <div className="text-left animate-fade-in">
-            <div className="mb-6">
-              <span className="inline-block px-4 py-2 bg-orange/20 text-orange-600 dark:text-orange-400 rounded-full text-sm font-medium mb-4 animate-pulse">
-                👋 Hello, I'm
-              </span>
-              <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight">
-                <span className="text-white">Chandu</span>
+            <div className="mb-8">
+              <div className="flex items-center gap-3 mb-6">
+                <span className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange/20 to-primary/20 backdrop-blur-sm text-orange-400 rounded-full text-sm font-medium border border-orange/30 animate-pulse">
+                  <Sparkles className="w-4 h-4" />
+                  Hello, I'm
+                </span>
+              </div>
+              <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
+                <span className="text-white bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">Chandu</span>
                 <br />
-                <span className="text-orange">Bommana</span>
+                <span className="bg-gradient-to-r from-orange via-orange-light to-primary bg-clip-text text-transparent animate-pulse">Bommana</span>
               </h1>
-              <h2 className="text-2xl md:text-3xl font-semibold text-white/90 mb-4">
-                Junior Software Engineer
-              </h2>
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-12 h-0.5 bg-gradient-to-r from-orange to-primary rounded-full"></div>
+                <h2 className="text-2xl md:text-4xl font-semibold text-white/90">
+                  Junior Software Engineer
+                </h2>
+                <div className="w-12 h-0.5 bg-gradient-to-l from-orange to-primary rounded-full"></div>
+              </div>
             </div>
             
-            <p className="text-lg md:text-xl text-white/80 max-w-lg mb-8 leading-relaxed">
-              I specialize in building responsive, high-performance web applications 
-              using modern technologies like React, Angular, and Node.js.
+            <p className="text-xl md:text-2xl text-white/90 max-w-2xl mb-10 leading-relaxed font-light">
+              I specialize in building <span className="text-orange font-medium">responsive</span>, 
+              <span className="text-primary-glow font-medium"> high-performance</span> web applications 
+              using modern technologies like <span className="text-white font-medium">React</span>, 
+              <span className="text-white font-medium">Angular</span>, and 
+              <span className="text-white font-medium">Node.js</span>.
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <Button size="lg" onClick={() => scrollToSection("#projects")} className="bg-orange hover:bg-orange/90 text-white hover:shadow-glow transition-smooth group px-8 py-3">
+            {/* Enhanced CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-6 mb-12">
+              <Button size="lg" onClick={() => scrollToSection("#projects")} className="bg-gradient-to-r from-orange to-orange-light hover:from-orange/90 hover:to-orange-light/90 text-white hover:shadow-glow transition-smooth group px-10 py-4 text-lg font-semibold rounded-2xl border-2 border-orange/30">
                 View My Work
-                <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
+                <ArrowDown className="ml-3 h-5 w-5 group-hover:translate-y-1 transition-transform" />
               </Button>
               
-              <Button size="lg" variant="outline" onClick={() => scrollToSection("#contact")} className="border-white/30 hover:border-white transition-smooth px-8 py-3 bg-slate-300 hover:bg-slate-200 text-base text-slate-500">
-                <Mail className="mr-2 h-4 w-4" />
+              <Button size="lg" variant="outline" onClick={() => scrollToSection("#contact")} className="border-2 border-white/40 hover:border-white/70 transition-smooth px-10 py-4 text-lg font-semibold rounded-2xl bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white">
+                <Mail className="mr-3 h-5 w-5" />
                 Contact Me
               </Button>
             </div>
 
-            {/* Social Links */}
-            <div className="flex gap-4">
-              <Button variant="ghost" size="icon" className="hover:text-orange hover:bg-white/10 text-white/80 transition-smooth" asChild>
+            {/* Enhanced Social Links */}
+            <div className="flex gap-6">
+              <Button variant="ghost" size="icon" className="hover:text-orange hover:bg-gradient-to-r hover:from-orange/20 hover:to-primary/20 text-white/90 transition-smooth w-14 h-14 rounded-2xl border border-white/20 hover:border-orange/50 backdrop-blur-sm" asChild>
                 <a href="https://linkedin.com/in/chandu-bommana" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-                  <Linkedin className="h-5 w-5" />
+                  <Linkedin className="h-6 w-6" />
                 </a>
               </Button>
               
-              <Button variant="ghost" size="icon" className="hover:text-orange hover:bg-white/10 text-white/80 transition-smooth" asChild>
+              <Button variant="ghost" size="icon" className="hover:text-orange hover:bg-gradient-to-r hover:from-orange/20 hover:to-primary/20 text-white/90 transition-smooth w-14 h-14 rounded-2xl border border-white/20 hover:border-orange/50 backdrop-blur-sm" asChild>
                 <a href="https://github.com/chandu-bommana" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-                  <Github className="h-5 w-5" />
+                  <Github className="h-6 w-6" />
                 </a>
               </Button>
               
-              <Button variant="ghost" size="icon" className="hover:text-orange hover:bg-white/10 text-white/80 transition-smooth" asChild>
+              <Button variant="ghost" size="icon" className="hover:text-orange hover:bg-gradient-to-r hover:from-orange/20 hover:to-primary/20 text-white/90 transition-smooth w-14 h-14 rounded-2xl border border-white/20 hover:border-orange/50 backdrop-blur-sm" asChild>
                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download Resume">
-                  <Download className="h-5 w-5" />
+                  <Download className="h-6 w-6" />
                 </a>
               </Button>
             </div>
           </div>
 
-          {/* Image Side */}
+          {/* Enhanced Image Side */}
           <div className="relative flex justify-center lg:justify-end animate-fade-in">
             <div className="relative">
-              {/* Profile Image with Modern Styling */}
-              <div className="relative w-80 h-80 md:w-96 md:h-96">
-                <div className="absolute inset-0 bg-gradient-accent rounded-full blur-lg opacity-50 animate-pulse" />
-                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/20 shadow-2xl">
+              {/* Enhanced Profile Image with Modern Styling */}
+              <div className="relative w-96 h-96 md:w-[28rem] md:h-[28rem]">
+                {/* Multiple Gradient Layers */}
+                <div className="absolute inset-0 bg-gradient-to-r from-orange/40 via-primary/30 to-orange/40 rounded-full blur-2xl opacity-60 animate-pulse" />
+                <div className="absolute inset-2 bg-gradient-to-l from-primary-glow/30 to-orange/30 rounded-full blur-xl opacity-50 animate-pulse" style={{ animationDelay: '1s' }} />
+                
+                {/* Main Image Container */}
+                <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/30 shadow-2xl backdrop-blur-sm">
+                  <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-orange/10 rounded-full" />
                   <img src={profileImage} alt="Chandu Bommana - Professional Profile" className="w-full h-full object-cover" />
                 </div>
-                {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 w-12 h-12 bg-orange rounded-full flex items-center justify-center shadow-glow animate-bounce">
-                  <span className="text-white font-bold">👨‍💻</span>
+                
+                {/* Enhanced Floating Elements */}
+                <div className="absolute -top-6 -right-6 w-16 h-16 bg-gradient-to-r from-orange to-orange-light rounded-2xl flex items-center justify-center shadow-glow animate-bounce border-2 border-white/20 backdrop-blur-sm">
+                  <Code2 className="w-8 h-8 text-white" />
                 </div>
-                <div className="absolute -bottom-6 -left-6 px-4 py-2 bg-white/90 backdrop-blur-sm rounded-full shadow-lg">
-                  <span className="text-primary font-semibold text-sm">Available for hire</span>
+                <div className="absolute -bottom-8 -left-8 px-6 py-3 bg-gradient-to-r from-white/95 to-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-white/50">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-primary font-semibold text-base">Available for hire</span>
+                  </div>
+                </div>
+                <div className="absolute top-1/4 -left-4 w-12 h-12 bg-gradient-to-r from-primary/80 to-primary-glow/80 rounded-xl flex items-center justify-center shadow-lg animate-float border border-white/30">
+                  <Sparkles className="w-6 h-6 text-white" />
                 </div>
               </div>
             </div>
