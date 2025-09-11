@@ -82,13 +82,13 @@ export function HeroSection() {
             {/* Enhanced Social Links */}
             <div className="flex gap-6">
               <Button variant="ghost" size="icon" className="hover:text-orange hover:bg-gradient-to-r hover:from-orange/20 hover:to-primary/20 text-white/90 transition-smooth w-14 h-14 rounded-2xl border border-white/20 hover:border-orange/50 backdrop-blur-sm" asChild>
-                <a href="https://linkedin.com/in/chandu-bommana" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                <a href="https://www.linkedin.com/in/chandu-bommana-070114256/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
                   <Linkedin className="h-6 w-6" />
                 </a>
               </Button>
               
               <Button variant="ghost" size="icon" className="hover:text-orange hover:bg-gradient-to-r hover:from-orange/20 hover:to-primary/20 text-white/90 transition-smooth w-14 h-14 rounded-2xl border border-white/20 hover:border-orange/50 backdrop-blur-sm" asChild>
-                <a href="https://github.com/chandu-bommana" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                <a href="https://github.com/chandubommana" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
                   <Github className="h-6 w-6" />
                 </a>
               </Button>
