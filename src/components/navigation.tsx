@@ -45,7 +45,7 @@ export function Navigation() {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="font-bold text-xl text-gradient">
+          <div className="font-bold text-xl text-primary">
             Chandu Bommana
           </div>
 
@@ -55,7 +55,7 @@ export function Navigation() {
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-text-secondary hover:text-primary transition-smooth font-medium"
+                className="text-foreground hover:text-primary transition-smooth font-medium"
               >
                 {item.name}
               </button>
@@ -89,7 +89,7 @@ export function Navigation() {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block text-text-secondary hover:text-primary transition-smooth font-medium w-full text-left"
+                  className="block text-foreground hover:text-primary transition-smooth font-medium w-full text-left"
                 >
                   {item.name}
                 </button>
