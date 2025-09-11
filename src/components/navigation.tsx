@@ -42,20 +42,20 @@ export function Navigation() {
           : "bg-background/20 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-14 sm:h-16">
           {/* Logo */}
-          <div className="font-bold text-xl text-primary">
+          <div className="font-bold text-lg sm:text-xl text-primary">
             Chandu Bommana
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-primary transition-smooth font-medium"
+                className="text-foreground hover:text-primary transition-smooth font-medium text-sm lg:text-base"
               >
                 {item.name}
               </button>
@@ -64,18 +64,19 @@ export function Navigation() {
           </div>
 
           {/* Mobile Navigation Toggle */}
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="md:hidden flex items-center space-x-3 sm:space-x-4">
             <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle mobile menu"
+              className="h-9 w-9 sm:h-10 sm:w-10"
             >
               {isMobileMenuOpen ? (
-                <X className="h-5 w-5" />
+                <X className="h-4 w-4 sm:h-5 sm:w-5" />
               ) : (
-                <Menu className="h-5 w-5" />
+                <Menu className="h-4 w-4 sm:h-5 sm:w-5" />
               )}
             </Button>
           </div>
@@ -84,12 +85,12 @@ export function Navigation() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-lg border-b border-border animate-fade-in">
-            <div className="px-6 py-4 space-y-4">
+            <div className="px-4 sm:px-6 py-4 space-y-3 sm:space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block text-foreground hover:text-primary transition-smooth font-medium w-full text-left"
+                  className="block text-foreground hover:text-primary transition-smooth font-medium w-full text-left py-2 text-base"
                 >
                   {item.name}
                 </button>
