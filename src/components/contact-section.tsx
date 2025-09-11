@@ -135,7 +135,7 @@ export function ContactSection() {
                         asChild
                       >
                         <a
-                          href="https://linkedin.com/in/chandu-bommana"
+                          href="https://www.linkedin.com/in/chandu-bommana-070114256/"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="LinkedIn Profile"
@@ -151,7 +151,7 @@ export function ContactSection() {
                         asChild
                       >
                         <a
-                          href="https://github.com/chandu-bommana"
+                          href="https://github.com/chandubommana"
                           target="_blank"
                           rel="noopener noreferrer"
                           aria-label="GitHub Profile"
