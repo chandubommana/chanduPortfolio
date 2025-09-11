@@ -30,10 +30,9 @@ export function ContactSection() {
     setIsSubmitting(true);
 
     try {
-      // Replace these with your actual EmailJS credentials
-      const serviceId = 'YOUR_SERVICE_ID';
-      const templateId = 'YOUR_TEMPLATE_ID';
-      const publicKey = 'YOUR_PUBLIC_KEY';
+      const serviceId = 'service_lo3ojqj';
+      const templateId = 'template_61cvk9m';
+      const publicKey = 'ALv-5S9hGoYtsR0mG';
 
       const templateParams = {
         from_name: formData.name,
