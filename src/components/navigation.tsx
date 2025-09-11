@@ -38,8 +38,8 @@ export function Navigation() {
     <nav
       className={`fixed top-0 w-full z-50 transition-smooth ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-lg border-b border-border shadow-sm"
-          : "bg-transparent"
+          ? "bg-background/90 backdrop-blur-lg border-b border-border shadow-sm"
+          : "bg-background/20 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-6">
